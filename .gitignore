@@ -6,7 +6,6 @@
 .pnp.js
 
 # src files
-/src/pages/ContinentDetails.jsx
 /src/pages/Continents.test.js
 
 # testing

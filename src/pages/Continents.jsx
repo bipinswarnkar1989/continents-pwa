@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import styled from 'styled-components';
 import { useQuery } from '@apollo/react-hooks';
 import { getContinents } from '../queries';
-import { createBrowserHistory } from 'history';
+import Spinner from '../components/Spinner';
 
 const Table = styled.table`
     border-collapse: collapse;
@@ -58,20 +58,18 @@ const HeadingDiv = styled.div`
    }
 `;
 
-const history = createBrowserHistory();
-
 const Contents = (props) => {
   const { data } = useQuery(getContinents);
 
   const navToContinent = useCallback(
     (code) => {
-       history.push(`/continent/${code}`)
+       props.history.push(`/continent/${code}`)
     },
-    [history]
+    [props.history]
   )
 
   if (data === undefined || data.continents === undefined) {
-    return null
+    return <Spinner/>;
    }
    const { continents } = data;
     return (
