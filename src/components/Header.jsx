@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
    display: block;
@@ -21,24 +24,42 @@ const Inner = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 100%;
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   justify-content: center;
 
-  .span{
+  span{
     color: white;
     font-size: 25px; 
   }
 `;
 
+const BackNav = styled.div`
+   width: 100px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   color: white;
+`;
+
 const Header = () => {
+   let history = useHistory();
+   const navToHome = useCallback(
+      () => {
+         history.push('/');
+      },
+      [history]
+   )
     return (
          <Container>
             <Inner>
-            <Logo><span>AasaanJobs</span></Logo>
+            {history.location.pathname !== '/' && 
+              <BackNav onClick={navToHome.bind(null)}><FontAwesomeIcon style={{cursor: 'pointer'}} icon={faArrowLeft}  color="white" inverse/></BackNav>
+            }
+            <Logo><span>AJ</span></Logo>
             </Inner>
          </Container>
     )
