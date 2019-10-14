@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import Header from './components/Header';
 
 const Container = styled.div`
-   display: 'flex';
+   flex: 1;
+   padding: 10px;
 `;
 
 function App() {
