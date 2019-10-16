@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `docker-compose up`
 
-Using only above single Docker command, application will fetch all the dependencies and run in the development mode.
+Using only above single Docker script, application will fetch all the dependencies and run in the development mode.
 
 ### `yarn start`
 
