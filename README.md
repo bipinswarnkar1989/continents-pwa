@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `docker-compose up`
+
+Using only above single Docker script, application will fetch all the dependencies and run in the development mode.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
