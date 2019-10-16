@@ -12,7 +12,7 @@ const ContinentDetails = React.lazy(() => import('./pages/ContinentDetails'));
 const Routes = () => (
   <Router>
    <Header/>
-  <React.Suspense fallback={<p style={{position:'absolute', top: '50%', left: '40%'}}>Please wait...</p>}>
+  <React.Suspense fallback={<div style={{width: '100%', margin: '100px auto', display: 'block', textAlign: 'center'}}><span>Please wait...</span></div>}>
   <Switch>
     <Route exact path="/"
     component={({ match, history }) => {
