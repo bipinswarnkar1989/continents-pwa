@@ -8,10 +8,10 @@ const Container = styled.div`
    padding: 10px;
 `;
 
+// Application Wrapper function
 function App() {
   return (
     <Container>
-       
        <Routes/>
     </Container>
   );
