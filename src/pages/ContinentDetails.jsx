@@ -82,11 +82,11 @@ const ContinentDetails = props => {
           <span>Continent Details</span>
           </HeadingDiv>
           <ContentCard>
-          <Code><span>{continent.code}</span></Code>
-          <Name>{continent.name}</Name>
-          <CountriesHead><span>{continent.countries.length}</span> Countries :</CountriesHead>
-          <CountriesList>
-          {continent.countries.map(c => <CountriesListItem>{c.name}</CountriesListItem>)}
+          <Code><span data-testid="code">{continent.code}</span></Code>
+          <Name data-testid="name">{continent.name}</Name>
+          <CountriesHead><span data-testid="countries-length">{continent.countries.length}</span> Countries :</CountriesHead>
+          <CountriesList data-testid="country-item">
+          {continent.countries.map(c => <CountriesListItem key={c.code} data-testid="country-item-name">{c.name}</CountriesListItem>)}
           </CountriesList>
           </ContentCard>
 

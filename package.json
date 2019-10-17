@@ -41,7 +41,8 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^9.1.4",
-    "apollo-link-mock": "^1.0.1"
+    "@testing-library/jest-dom": "^4.1.2",
+    "apollo-link-mock": "^1.0.1",
+    "@testing-library/react": "9.1.3"
   }
 }
